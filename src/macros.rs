@@ -5,9 +5,9 @@
 /// # Example
 ///
 /// ```
-/// use mongodm::mongo::bson::doc;
-/// use mongodm::field;
-/// use mongodm::operator::*;
+/// use mongododm::mongo::bson::doc;
+/// use mongododm::field;
+/// use mongododm::operator::*;
 ///
 /// struct MyModel {
 ///     foo: i64,
@@ -50,8 +50,8 @@
 ///
 /// Nested structs
 /// ```
-/// use mongodm::mongo::bson::doc;
-/// use mongodm::field;
+/// use mongododm::mongo::bson::doc;
+/// use mongododm::field;
 ///
 /// struct Foo {
 ///     bar: Bar,
@@ -85,8 +85,8 @@
 /// If the field doesn't exist, compilation will fail.
 ///
 /// ```compile_fail
-///# use mongodm::mongo::bson::doc;
-///# use mongodm::field;
+///# use mongododm::mongo::bson::doc;
+///# use mongododm::field;
 ///#
 /// struct MyModel {
 ///     foo: i64,
@@ -102,8 +102,8 @@
 /// ```
 ///
 /// ```compile_fail
-///# use mongodm::mongo::bson::doc;
-///# use mongodm::field;
+///# use mongododm::mongo::bson::doc;
+///# use mongododm::field;
 ///#
 ///# struct MyModel {
 ///#     foo: i64,
@@ -119,8 +119,8 @@
 /// ```
 ///
 /// ```compile_fail
-///# use mongodm::mongo::bson::doc;
-///# use mongodm::field;
+///# use mongododm::mongo::bson::doc;
+///# use mongododm::field;
 ///#
 ///# struct MyModel {
 ///#     foo: i64,
@@ -135,8 +135,8 @@
 /// doc! { field!((foo in MyModel).(baz in Bar)): 0 };
 /// ```
 /// ```compile_fail
-///# use mongodm::mongo::bson::doc;
-///# use mongodm::field;
+///# use mongododm::mongo::bson::doc;
+///# use mongododm::field;
 ///#
 ///# struct MyModel {
 ///#     foo: i64,
@@ -241,9 +241,9 @@ macro_rules! field_check_helper {
 /// # Example
 ///
 /// ```
-/// use mongodm::mongo::bson::doc;
-/// use mongodm::f;
-/// use mongodm::operator::*;
+/// use mongododm::mongo::bson::doc;
+/// use mongododm::f;
+/// use mongododm::operator::*;
 ///
 /// struct MyModel {
 ///     foo: i64,
@@ -297,7 +297,7 @@ macro_rules! f {
 /// # Example
 ///
 /// ```
-/// use mongodm::prelude::*;
+/// use mongododm::prelude::*;
 ///
 /// struct User {
 ///     _id: ObjectId,

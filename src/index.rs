@@ -76,7 +76,7 @@ struct TextIndexKey {
 ///
 /// # Example
 /// ```
-/// use mongodm::{Index, SortOrder, IndexOption, mongo::bson::doc};
+/// use mongododm::{Index, SortOrder, IndexOption, mongo::bson::doc};
 ///
 /// let index = Index::new_with_direction("username", SortOrder::Descending)
 ///     .with_key("last_seen") // compound with last_seen

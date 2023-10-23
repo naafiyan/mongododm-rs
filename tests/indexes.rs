@@ -4,7 +4,7 @@ extern crate pretty_assertions;
 use mongodb::bson::{doc, Document};
 use mongodb::options::ClientOptions;
 use mongodb::Client;
-use mongodm::{sync_indexes, CollectionConfig, Index, IndexOption, Indexes};
+use mongododm::{sync_indexes, CollectionConfig, Index, IndexOption, Indexes};
 
 struct OneSyncCollConf;
 

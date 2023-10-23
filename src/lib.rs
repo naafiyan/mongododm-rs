@@ -1,4 +1,4 @@
-//! MongODM
+//! mongododm
 //! =======
 //!
 //! A thin ODM layer for MongoDB built upon the [official Rust driver](https://github.com/mongodb/mongo-rust-driver).
@@ -15,12 +15,12 @@
 //!
 //! ```ignore
 //! # async fn demo() -> Result<(), mongodb::error::Error> {
-//! use mongodm::{ToRepository, Model, CollectionConfig, Indexes, Index, IndexOption, sync_indexes};
-//! use mongodm::mongo::{Client, options::ClientOptions, bson::doc};
+//! use mongododm::{ToRepository, Model, CollectionConfig, Indexes, Index, IndexOption, sync_indexes};
+//! use mongododm::mongo::{Client, options::ClientOptions, bson::doc};
 //! use serde::{Serialize, Deserialize};
 //! use std::borrow::Cow;
 //! // field! is used to make sure at compile time that some field exists in a given structure
-//! use mongodm::field;
+//! use mongododm::field;
 //!
 //! struct UserCollConf;
 //!
@@ -48,7 +48,7 @@
 //!
 //! let client_options = ClientOptions::parse("mongodb://localhost:27017").await?;
 //! let client = Client::with_options(client_options)?;
-//! let db = client.database("mongodm_wayk_demo");
+//! let db = client.database("mongododm_wayk_demo");
 //!
 //! sync_indexes::<UserCollConf>(&db).await?;
 //! // indexes are now synced in backend for user collection
@@ -67,11 +67,11 @@
 //! assert_eq!(fetched_user.unwrap(), user);
 //!
 //! // f! is a shorter version of field!
-//! use mongodm::f;
+//! use mongododm::f;
 //! repository.find_one(doc! { f!(username in User): "David" }, None).await?.unwrap();
 //!
 //! // With static operators for queries (prevent invalid queries due to typos)
-//! use mongodm::operator::*;
+//! use mongododm::operator::*;
 //! repository.find_one(
 //!     doc! { And: [
 //!         { f!(username in User): "David" },
@@ -158,14 +158,14 @@ impl ToRepository for mongodb::Database {
     }
 }
 
-/// Contains everything you need to use MongODM.
+/// Contains everything you need to use mongododm.
 ///
 /// It expose the underlying `mongodb` members prefixed by **Mongo** in an attempt
 /// to reduce the risk of conflict, considering the large amount of members
 /// exported by the `mongodb` driver.
 ///
 /// ```rust
-/// use mongodm::prelude::*;
+/// use mongododm::prelude::*;
 ///
 /// // ...
 /// ```

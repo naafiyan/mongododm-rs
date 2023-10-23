@@ -7,8 +7,8 @@
 //! string like you would in a mongo shell.
 //!
 //! ```
-//! use mongodm::mongo::bson::doc;
-//! use mongodm::operator::*;
+//! use mongododm::mongo::bson::doc;
+//! use mongododm::operator::*;
 //!
 //! // Using static operators
 //! let a = doc! {

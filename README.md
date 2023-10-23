@@ -1,8 +1,4 @@
-[![Crates.io](https://img.shields.io/crates/v/mongodm.svg)](https://crates.io/crates/mongodm)
-[![docs.rs](https://docs.rs/mongodm/badge.svg)](https://docs.rs/mongodm)
-![Crates.io](https://img.shields.io/crates/l/mongodm)
-
-MongODM
+MongDODM
 =======
 
 A thin ODM layer for MongoDB built upon the [official Rust driver](https://github.com/mongodb/mongo-rust-driver).

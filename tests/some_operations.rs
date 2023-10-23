@@ -2,7 +2,7 @@
 extern crate pretty_assertions;
 
 use futures_util::StreamExt;
-use mongodm::prelude::*;
+use mongododm::prelude::*;
 use serde::{Deserialize, Serialize};
 
 struct UserCollConf;

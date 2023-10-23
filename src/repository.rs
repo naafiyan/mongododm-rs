@@ -98,13 +98,13 @@ impl<M: Model> Repository<M> {
     ///
     /// ```ignore
     /// # async fn demo() -> Result<(), mongodb::error::Error> {
-    /// # use mongodm::mongo::{Client, options::ClientOptions};
+    /// # use mongododm::mongo::{Client, options::ClientOptions};
     /// # let client_options = ClientOptions::parse("mongodb://localhost:27017").await?;
     /// # let client = Client::with_options(client_options)?;
-    /// # let db = client.database("mongodm_wayk_demo");
-    /// use mongodm::{ToRepository, Model, CollectionConfig};
-    /// use mongodm::mongo::bson::doc;
-    /// use mongodm::f;
+    /// # let db = client.database("mongododm_wayk_demo");
+    /// use mongododm::{ToRepository, Model, CollectionConfig};
+    /// use mongododm::mongo::bson::doc;
+    /// use mongododm::f;
     /// use serde::{Serialize, Deserialize};
     ///
     /// struct UserCollConf;
@@ -178,11 +178,11 @@ impl<M: Model> Repository<M> {
     ///
     /// ```compile_fail
     /// # async fn demo() -> Result<(), mongodb::error::Error> {
-    /// # use mongodm::mongo::{Client, options::ClientOptions};
+    /// # use mongododm::mongo::{Client, options::ClientOptions};
     /// # let client_options = ClientOptions::parse("mongodb://localhost:27017").await?;
     /// # let client = Client::with_options(client_options)?;
-    /// # let db = client.database("mongodm_wayk_demo");
-    /// use mongodm::{ToRepository, Model, CollectionConfig};
+    /// # let db = client.database("mongododm_wayk_demo");
+    /// use mongododm::{ToRepository, Model, CollectionConfig};
     /// use serde::{Serialize, Deserialize};
     ///
     /// struct ACollConf;
@@ -249,7 +249,7 @@ impl<M: Model> Repository<M> {
     /// # impl CollectionConfig for UserCollConf {
     /// #     fn collection_name() -> &'static str { "user" }
     /// # }
-    /// use mongodm::prelude::*;
+    /// use mongododm::prelude::*;
     /// /* ... */
     /// # async fn demo(_db: mongodb::Database) {
     /// let db: mongodb::Database; /* exists */
@@ -285,7 +285,7 @@ impl<M: Model> Repository<M> {
     }
 }
 
-/// MongODM-provided utilities functions on `mongodb::Collection<M>`.
+/// mongododm-provided utilities functions on `mongodb::Collection<M>`.
 #[async_trait]
 pub trait CollectionExt {
     /// Apply multiple update operations in bulk.
@@ -302,7 +302,7 @@ pub trait CollectionExt {
     /// #     name: String,
     /// #     age: i64,
     /// # }
-    /// use mongodm::prelude::*;
+    /// use mongododm::prelude::*;
     /// /* ... */
     /// # async fn demo(_db: mongodb::Database) {
     /// let db: mongodb::Database; /* exists */
