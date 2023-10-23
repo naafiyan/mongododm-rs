@@ -1,6 +1,11 @@
 MongDODM
 =======
 
+
+NOTE: WORK IN PROGRESS!!! WE ARE STUDENTS AND RIGHT NOW THIS IS A VERBATIM FORK OF MONGODM, WHICH WE MAKE 1:1 USE OF!! 
+
+WE WILL BE MAKING MODIFICATIONS HERE SOON 
+
 A thin ODM layer for MongoDB built upon the [official Rust driver](https://github.com/mongodb/mongo-rust-driver).
 
 Main features:
@@ -13,7 +18,7 @@ Main features:
 
 ## Examples
 
-See [documentation](https://docs.rs/mongodm).
+See [documentation](https://docs.rs/mongododm).
 
 ## Tests
 
