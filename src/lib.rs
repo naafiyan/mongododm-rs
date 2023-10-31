@@ -92,13 +92,14 @@ extern crate pretty_assertions;
 mod index;
 mod macros;
 mod repository;
-
+pub mod delete;
 pub mod operator;
 
 pub use index::{sync_indexes, Index, IndexOption, Indexes, SortOrder};
 pub use repository::{
     BulkUpdate, BulkUpdateResult, BulkUpdateUpsertResult, CollectionExt, Repository,
 };
+pub use delete::SafeDelete;
 
 // Re-export mongodb
 pub use mongodb as mongo;
