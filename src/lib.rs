@@ -99,8 +99,7 @@ pub use index::{sync_indexes, Index, IndexOption, Indexes, SortOrder};
 pub use repository::{
     BulkUpdate, BulkUpdateResult, BulkUpdateUpsertResult, CollectionExt, Repository,
 };
-pub use delete::SafeDelete;
-
+pub use delete::{SafeDeleteable, Schemable};
 // Re-export mongodb
 pub use mongodb as mongo;
 // Re-export bson

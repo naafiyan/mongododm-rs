@@ -17,6 +17,7 @@ serde = { version = "1", features = ["derive"] }
 futures-core = "0.3"
 futures-util = "0.3"
 async-trait = "0.1"
+mongowner = { path = "../mongowner" }
 
 [dev-dependencies]
 tokio = "1.14.0"
